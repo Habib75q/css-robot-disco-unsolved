@@ -1,0 +1,96 @@
+@keyframes blinkLeftEye {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.robot-eye-left {
+  animation: blinkLeftEye 2s infinite;
+}
+
+@keyframes stretchRightEye {
+  0%, 100% {
+    width: 110px;
+  }
+  50% {
+    width: 60px;
+  }
+}
+.robot-eye-right {
+  animation: stretchRightEye 2.5s infinite;
+}
+
+@keyframes earWiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+}
+.robot-ear-left,
+.robot-ear-right {
+  animation: earWiggle 3s infinite ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes rotateNose {
+  0%, 100% {
+    transform: translateX(-50%) rotate(0deg);
+    background-color: orange;
+  }
+  50% {
+    transform: translateX(-50%) rotate(180deg);
+    background-color: tomato;
+  }
+}
+.robot-nose:hover {
+  animation: rotateNose 1.5s infinite ease-in-out;
+}
+
+@keyframes teethShine {
+  0%, 100% {
+    background-color: white;
+  }
+  50% {
+    background-color: #b3f0ff;
+  }
+}
+.robot-tooth {
+  animation: teethShine 2s infinite;
+}
+
+@keyframes hairBounceColor {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.robot-hair-one {
+  animation: hairBounceColor 2s infinite;
+  background-color: green;
+}
+
+.robot-hair-two {
+  animation: hairBounceColor 2.2s infinite;
+  background-color: goldenrod;
+}
+
+.robot-hair-three {
+  animation: hairBounceColor 2.4s infinite;
+  background-color: deeppink;
+}
+
+.robot-eye-left:hover,
+.robot-eye-right:hover {
+  filter: drop-shadow(0 0 10px cyan);
+  transition: filter 0.3s ease;
+}
